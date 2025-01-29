@@ -40,3 +40,12 @@ ol li {
 footer {
   text-align: center;
 }
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark h2 {
+  color: #4F9ACF;
+}
