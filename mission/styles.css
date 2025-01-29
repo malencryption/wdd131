@@ -1,0 +1,42 @@
+html {
+  font: 20px Times New Roman;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  color: #006EB6;
+  font-size: 16px;
+  border-bottom: 1px solid #e0dddd;
+  margin-bottom: 45px;
+  font-weight: 500;
+}
+
+.content {
+  border: 1px solid #d2cece;
+  margin: 50px 35px;
+  padding: 70px 150px;
+  max-width: 600px;
+}
+
+.title {
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-align: center;
+}
+
+footer img {
+  width: 150px;
+  margin-top: 20px;
+}
+
+ol li {
+  padding-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+}
