@@ -1,9 +1,9 @@
 const themeSelector = document.querySelector("#theme")
+const body = document.body
+const logo = document.querySelector("img.logo")
 
 function changeTheme() {
   const theme = themeSelector.value
-  const body = document.querySelector("body")
-  const logo = document.querySelector("img.logo")
 
   if (theme === 'dark'){  
     body.classList.add("dark")
