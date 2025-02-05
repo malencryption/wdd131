@@ -7,21 +7,23 @@
     <meta name="description" content="Picture Gallery" />
     <meta name="author" content="Leesa Wangsgard" />
     <link rel="stylesheet" href="coolpics.css" />
-    <script src="coolpics.js"></script>
+    <script src="coolpics.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Cool Pics 📷</h1>
-      <button>Menu</button>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/people">People</a>
-        <a href="/places">Places</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-      </nav>
+      <div class="content">
+        <h1>Cool Pics 📷</h1>
+        <button class="menuBtn">Menu</button>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/people">People</a>
+          <a href="/places">Places</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
     </header>
-    <main>
+    <main class="content">
       <h2>Current Work</h2>
       <section class="gallery">
         <figure>
@@ -53,6 +55,8 @@
         </figure>
       </section>
     </main>
-    <footer>©2025 Not a real site 😀</footer>
+    <footer>
+      <div class="content">©2025 Not a real site 😀</div>
+    </footer>
   </body>
 </html>
