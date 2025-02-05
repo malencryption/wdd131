@@ -41,11 +41,14 @@ figure {
   margin: 0;
 }
 
-img {
-  max-width: 100%;
+figure img {
   object-fit: cover;
   width: 250px;
   height: 250px;
+}
+
+img {
+  max-width: 100%;
   border: 8px solid white;
   filter: drop-shadow(3px 3px 3px black);
 }
@@ -75,7 +78,7 @@ footer {
   margin-top: 20px;
 }
 
-.menuBtn {
+.menu-button, .close-viewer {
   background-color: unset;
   border: 0;
   color: var(--text-light);
@@ -107,21 +110,57 @@ main {
   align-items: center;
 }
 
+.hide {
+  display: none;
+}
+
+.viewer {
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: grid;
+  z-index: 10;
+}
+
+.viewer img {
+  max-width: calc(100% - 20px);
+  max-height: 100%;
+  height: auto;
+  justify-self: center;
+}
+
+.close-viewer {
+  place-self: self-end;
+  padding: 5px 10px;
+}
+
 @media screen and (min-width: 700px) {
   .gallery {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
+  .viewer img {
+    max-width: 680px;
+  }
+
+  .close-viewer {
+    right: calc(50% - 700px / 2);
+    position: relative;
+  }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   nav {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 15px;
   }
-  .menuBtn {
+  .menu-button {
     display: none;
   }
 }
