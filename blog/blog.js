@@ -23,5 +23,53 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
-	}
+	},
+  {
+    id: 3,
+    title: "Belgariad Book One: Pawn of Prophecy",
+    date: "Feb 12, 2022",
+    description:
+    "A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+    imgSrc:
+    "https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+    imgAlt: "Book cover for Pawn of Prophecy",
+    ages: "12-16",
+    genre: "Fantasy",
+    stars: "⭐⭐⭐⭐⭐"
+  },
 ]
+
+const feed = document.querySelector(".feed")
+
+function articleTemplate(article) {
+  const { title, date, description, imgSrc, imgAlt, ages, genre, stars } = article
+  return `
+    <article class="book">
+      <div class="display">
+        <h2>${title}</h2>
+        <div class="img-wrapper">
+          <img src="${imgSrc}" alt="${imgAlt}">
+        </div>
+        <p>${description} <a href="#">Read More...</a></p>
+      </div>
+      <div class="info">
+        <h3>${date}</h3>
+        <p class="age">${ages}</p>
+        <p class="genre">${genre}</p>
+        <div class="stars">${stars}</div>
+      </div>
+    </article>
+  `
+}
+
+function generateFeed(articles) {
+  let postsFeed = '';
+  const postsArray = articles.map((article) => articleTemplate(article))
+  console.log("PostsArray: ", postsArray)
+  postsArray.forEach(str => {
+    postsFeed += str
+  })
+  console.log("PostsFeed: ", postsFeed)
+  return postsFeed;
+}
+feed.innerHTML = generateFeed(articles)
