@@ -1,0 +1,25 @@
+form {
+  display: grid;
+  grid-template-columns: 100px auto;
+}
+
+.front, .back {
+  background-color: #ddd;
+  border-radius: 5px;
+  width: 400px;
+  height: 250px;
+}
+
+.front {
+  box-shadow: 3px 3px 0px #b4aeae;
+  z-index: 10;
+  display: grid;
+}
+
+.back {
+  z-index: 5;
+  margin: 40px 30px 15px 0;
+  display: grid;
+  align-items: end;
+  justify-items: end;
+}
