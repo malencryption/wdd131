@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  --primary-color: #1B98E0;
+  --secondary-color: #59c3c3;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica,sans-serif;
+  --secondary-font: "Indie Flower";
+  }
+
+body {
+  font-family: var(--primary-font);
+}
+
+h1, h2 {
+  font-family: var(--secondary-font), Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--primary-color);
+}
+img {
+	max-width: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  gap: 0.5em;
+}
+
+.title img {
+  width: 90px;
+}
+
+header {
+  border-bottom: 2px solid gray;
+  margin-bottom: 20px;
+}
+
+.search {
+  padding: 0 20px;
+}
+
+.search form {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+
+.search img {
+  width: 35px;
+  padding: 2px 5px;
+  border: 1px solid black;
+  border-radius: 0px 7px 7px 0px;
+}
+
+.search input {
+  border: 1px solid black;
+  border-radius: 7px 0px 0px 7px;
+  font-size: 1.2em;
+  width: calc(100% - 35px);
+}
+
+main {
+  padding: 0 20px;
+}
+
+.recipe {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 20px 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0.5em 0 20px;
+}
+
+.tags > div {
+  border: 1px solid black;
+  padding: 0 10px;
+}
+
+.description {
+  display: none;
+  margin-top: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 10px;
+  padding: 0 20px;
+}
+
+.social {
+  display: flex;
+  gap: 5px;
+  margin: 0 0 7px;
+}
+
+.social img {
+  width: 55px;
+}
+
+.attribution {
+  font-size: 0.6em;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  .recipe {
+    flex-direction: row;
+  }
+  .recipe img {
+    max-width: 250px;
+  }
+  .tags {
+    margin-top: 0;
+  }
+  .info {
+    margin-left: 20px;
+  }
+  .description {
+    display: block;
+  }
+  footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 960px) {
+  main, footer, .search {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .recipe img {
+    max-width: 350px;
+  }
+}
