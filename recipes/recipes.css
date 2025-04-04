@@ -50,6 +50,12 @@ header {
   margin: 10px 0 20px;
 }
 
+.search button {
+  background-color: unset;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 .search img {
   width: 35px;
   padding: 2px 5px;
@@ -74,6 +80,7 @@ main {
   padding: 20px 20px 40px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .tags {
@@ -122,6 +129,7 @@ footer {
 @media (min-width: 600px) {
   .recipe {
     flex-direction: row;
+    padding: 20px;
   }
   .recipe img {
     max-width: 250px;
